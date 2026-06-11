@@ -1,123 +1,187 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAJA BHAI VIP MATKA</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 600px;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 40px 30px;
-            border-radius: 20px;
-            border: 2px solid #ffd700;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            color: #ffd700;
-            margin-bottom: 30px;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-        }
-        
-        .games {
-            font-size: 1.2rem;
-            line-height: 2;
-            margin-bottom: 25px;
-            color: #e0e0e0;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            color: #ff6b6b;
-            font-weight: bold;
-            margin: 25px 0;
-        }
-        
-        .features {
-            font-size: 1.1rem;
-            margin: 20px 0;
-            color: #4ecdc4;
-        }
-        
-        .cta {
-            font-size: 1.3rem;
-            color: #ffd700;
-            margin-top: 25px;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-        
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #1a1a2e;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
-            transition: transform 0.3s;
-        }
-        
-        .btn:hover {
-            transform: scale(1.05);
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .games { font-size: 1rem; }
-            .tagline { font-size: 1.2rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAJA BHAI VIP MATKA</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    background:#050505;
+    font-family: Arial, Helvetica, sans-serif;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Snow */
+canvas{
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+
+/* Main Box */
+.box{
+    position:relative;
+    width:92%;
+    max-width:400px;
+    padding:30px 22px;
+    background:#0d0d0d;
+    border-radius:22px;
+    text-align:center;
+    z-index:1;
+}
+
+/* Animated Border */
+.box::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    background:linear-gradient(90deg,red,yellow,lime,cyan,blue,magenta,red);
+    animation:border 3s linear infinite;
+    z-index:-1;
+}
+.box::after{
+    content:"";
+    position:absolute;
+    inset:3px;
+    background:#0d0d0d;
+    border-radius:20px;
+    z-index:-1;
+}
+@keyframes border{
+    0%{filter:hue-rotate(0deg)}
+    100%{filter:hue-rotate(360deg)}
+}
+
+/* Logo */
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #00ffee;
+    box-shadow:0 0 18px rgba(0,255,238,.8);
+    margin-bottom:14px;
+}
+
+/* Text */
+h1{
+    color:#ffffff;
+    font-size:24px;
+    margin-bottom:12px;
+    letter-spacing:1px;
+}
+
+.info{
+    color:#ffffff;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:18px;
+    font-weight:bold;
+}
+
+.highlight{
+    color:#00ffcc;
+}
+
+/* Button */
+.join-btn{
+    display:inline-block;
+    padding:15px 32px;
+    background:linear-gradient(45deg,#00ffcc,#00ccff);
+    color:#000;
+    font-weight:bold;
+    font-size:16px;
+    border-radius:30px;
+    text-decoration:none;
+    box-shadow:0 0 18px rgba(0,255,204,.9);
+    animation:pulse 1.3s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.08)}
+    100%{transform:scale(1)}
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>RAJA BHAI VIP MATKA</h1>
-        
-        <div class="games">
-            @कल्याण @श्री देवी @टाइम बाजार<br>
-            @मिलन गेम (नाइट)<br>
-            @राजधानी (नाइट) @मेन बाजार
-        </div>
-        
-        <div class="tagline">🔥 बड़ा खेलो, बड़ा जीतो</div>
-        
-        <p>🌟 ओरिजिनल के साथ जुड़ें – आपकी किस्मत का सितारा</p>
-        
-        <div class="features">
-            ✅ फास्ट रिज़ल्ट | लाइव सपोर्ट | 100% भरोसेमंद
-        </div>
-        
-        <div class="cta">⏰ सीमित समय के लिए एक्सेस</div>
-        
-        <a href="https://t.me/+sov6e6qjZtFlODM9" class="btn">JOIN TELEGRAM CHENNEL</a>
+
+<canvas id="snow"></canvas>
+
+<div class="box">
+    <img src="logo.png" class="logo" alt="RAJA BHAI VIP MATKA">
+
+    <h1>RAJA BHAI VIP MATKA</h1>
+
+    <div class="info">
+        @कल्याण @श्री देवी @टाइम बाजार <br>
+        @मिलन गेम (नाइट) <br>
+        @राजधानी (नाइट) @मेन बाजार
+        <br><br>
+        🔥 <span class="highlight">बड़ा खेलो, बड़ा जीतो</span>
+        <br>
+        🌟 <span class="highlight">ओरिजिनल के साथ जुड़ें – आपकी किस्मत का सितारा</span>
+        <br><br>
+        ✅ फास्ट रिज़ल्ट | लाइव सपोर्ट | 100% भरोसेमंद
+        <br><br>
+        ⏰ <span class="highlight">सीमित समय के लिए एक्सेस</span>
     </div>
+
+    <a href="https://t.me/+sov6e6qjZtFlODM9" class="join-btn">
+        JOIN FREE TELEGRAM
+    </a>
+</div>
+
+<script>
+const canvas=document.getElementById("snow"),
+ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let snow=[];
+for(let i=0;i<120;i++){
+    snow.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*3+1,
+        d:Math.random()+1
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="white";
+    ctx.beginPath();
+    for(let i=0;i<snow.length;i++){
+        let s=snow[i];
+        ctx.moveTo(s.x,s.y);
+        ctx.arc(s.x,s.y,s.r,0,Math.PI*2,true);
+    }
+    ctx.fill();
+    move();
+}
+
+function move(){
+    for(let i=0;i<snow.length;i++){
+        let s=snow[i];
+        s.y+=Math.pow(s.d,2)+1;
+        if(s.y>canvas.height){
+            snow[i]={x:Math.random()*canvas.width,y:0,r:s.r,d:s.d};
+        }
+    }
+}
+setInterval(draw,33);
+</script>
+
 </body>
 </html>
